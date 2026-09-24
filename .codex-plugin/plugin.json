@@ -1,0 +1,38 @@
+{
+  "name": "excalidraw-codex",
+  "version": "0.1.0",
+  "description": "Draw through conversation and edit live in the Codex side panel, with automatic local saving.",
+  "author": {
+    "name": "Joebon"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "excalidraw-codex",
+    "shortDescription": "Draw with Codex. Edit live. Save locally.",
+    "longDescription": "Create and refine Excalidraw diagrams through conversation, then edit them in the Codex side panel. Includes local autosave, version history, conflict detection, and PNG/SVG export. No additional account or API key required.",
+    "developerName": "Joebon",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Draw a login flowchart with Excalidraw, open it in the side panel, and save it to this project.",
+      "Map the architecture of this project as an editable Excalidraw diagram.",
+      "Open the Excalidraw diagram in this project and continue editing it."
+    ],
+    "brandColor": "#7771BA",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "websiteURL": "https://github.com/korbinjoe/excalidraw-codex"
+  },
+  "license": "MIT",
+  "keywords": [
+    "excalidraw",
+    "diagram",
+    "canvas",
+    "codex"
+  ],
+  "repository": "https://github.com/korbinjoe/excalidraw-codex",
+  "homepage": "https://github.com/korbinjoe/excalidraw-codex"
+}

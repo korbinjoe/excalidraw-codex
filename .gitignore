@@ -1,0 +1,19 @@
+node_modules/
+release/
+artifacts/
+*.log
+
+.local-deploy.json
+.codex-update.lock/
+.DS_Store
+dist/
+examples/*.excalidraw
+
+.codex-build/
+.playwright-cli/
+
+# Local drawings and credentials
+diagrams/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,36 @@
+{
+  "name": "excalidraw-codex",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build && node scripts/package-assets.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "package": "npm run build && node scripts/package-release.mjs",
+    "codex:update": "node scripts/update-codex.mjs",
+    "codex:register": "node scripts/register-marketplace.mjs"
+  },
+  "dependencies": {
+    "@excalidraw/excalidraw": "0.18.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "vite": "7.3.1",
+    "playwright": "1.58.2"
+  },
+  "description": "Editable Excalidraw diagrams in the Codex side panel, with local autosave.",
+  "license": "MIT",
+  "author": "Joebon",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korbinjoe/excalidraw-codex.git"
+  },
+  "homepage": "https://github.com/korbinjoe/excalidraw-codex#readme",
+  "bugs": {
+    "url": "https://github.com/korbinjoe/excalidraw-codex/issues"
+  }
+}
