@@ -6,7 +6,9 @@ Draw with Codex. Refine by hand. Keep an editable file.
 
 `excalidraw-codex` brings the Excalidraw editor into the Codex side panel. Describe a flowchart, architecture diagram, or idea in conversation, then move shapes and edit labels directly on the canvas. Follow-up requests work with the current drawing, including your manual edits.
 
-![An editable diagram created with excalidraw-codex](assets/diagram.png)
+![Hand-drawn event-driven checkout architecture, with API services, persistence, an event bus, and background workers](assets/diagram.png)
+
+An example of what you can draw: an event-driven checkout system, with handwritten labels and editable shapes. [Open the full-size image](assets/diagram.png) · [Download the Excalidraw source](assets/diagram.excalidraw).
 
 ## What you can do
 

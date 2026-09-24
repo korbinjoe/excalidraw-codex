@@ -10,3 +10,5 @@
 
 - Use `excalidraw-codex` as the public plugin, package, and Skill name. Keep the legacy runtime state namespace for existing sessions and history.
 - Write source, UI strings, comments, tests, examples, and contributor documentation in English. Chinese is reserved for `README.zh-CN.md` and the README language switch. Do not translate user-owned drawings, third-party license notices, or generated dependency assets.
+
+- README showcases should use real Excalidraw exports with handwritten typography and a representative multi-step flowchart or architecture diagram. Keep an editable scene alongside the image and check label legibility, grouping, and connector routing before publishing.

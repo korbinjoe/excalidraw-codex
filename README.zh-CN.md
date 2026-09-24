@@ -6,7 +6,9 @@
 
 `excalidraw-codex` 将 Excalidraw 编辑器带到 Codex 侧边面板。你可以通过对话创建流程图、架构图或草图，再直接拖动形状、修改文字。后续对话会基于当前画布继续修改，包括你手动做出的调整。
 
-![使用 excalidraw-codex 创建的可编辑图表](assets/diagram.png)
+![手写风格的事件驱动下单系统架构图，包含 API 服务、持久化、事件总线和后台任务](assets/diagram.png)
+
+示例展示了一套事件驱动的下单系统，采用手写字体，所有形状均可继续编辑。[查看原尺寸图片](assets/diagram.png) · [下载 Excalidraw 源文件](assets/diagram.excalidraw)。
 
 ## 你可以做什么
 

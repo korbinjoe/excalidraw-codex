@@ -1,1 +1,903 @@
-{"create":[{"id":"title","type":"text","x":100,"y":20,"text":"From conversation to canvas","fontSize":28,"strokeColor":"#47424e"},{"id":"prompt","type":"rectangle","x":100,"y":110,"width":300,"height":78,"text":"Describe your idea in Codex","backgroundColor":"#e7e5ff","strokeColor":"#7267ad","roundness":{"type":3}},{"id":"canvas","type":"rectangle","x":100,"y":265,"width":300,"height":78,"text":"See it live, edit it by hand","backgroundColor":"#d8f2e6","strokeColor":"#47826b","roundness":{"type":3}},{"id":"save","type":"rectangle","x":100,"y":420,"width":300,"height":78,"text":"Save an editable local file","backgroundColor":"#ffedcf","strokeColor":"#b48d4f","roundness":{"type":3}},{"id":"a1","type":"arrow","startElementId":"prompt","endElementId":"canvas","strokeColor":"#8a8594"},{"id":"a2","type":"arrow","startElementId":"canvas","endElementId":"save","strokeColor":"#8a8594"}],"fit":true}
+{
+  "create": [
+    {
+      "id": "clients-zone",
+      "type": "rectangle",
+      "x": 40,
+      "y": 170,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.7,
+      "strokeWidth": 1,
+      "strokeColor": "#c5cbd3",
+      "width": 235,
+      "height": 535,
+      "backgroundColor": "#f8f9fc",
+      "strokeStyle": "dashed",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "request-zone",
+      "type": "rectangle",
+      "x": 325,
+      "y": 170,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.7,
+      "strokeWidth": 1,
+      "strokeColor": "#c5cbd3",
+      "width": 635,
+      "height": 535,
+      "backgroundColor": "#f6f8ff",
+      "strokeStyle": "dashed",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "data-zone",
+      "type": "rectangle",
+      "x": 1010,
+      "y": 170,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.7,
+      "strokeWidth": 1,
+      "strokeColor": "#c5cbd3",
+      "width": 270,
+      "height": 535,
+      "backgroundColor": "#fffbf2",
+      "strokeStyle": "dashed",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "workers-zone",
+      "type": "rectangle",
+      "x": 40,
+      "y": 755,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.7,
+      "strokeWidth": 1,
+      "strokeColor": "#c5cbd3",
+      "width": 1240,
+      "height": 230,
+      "backgroundColor": "#f4faf6",
+      "strokeStyle": "dashed",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "x": 40,
+      "y": 25,
+      "fontFamily": 1,
+      "fontSize": 42,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#293447",
+      "text": "Checkout, without the bottleneck."
+    },
+    {
+      "id": "subtitle",
+      "type": "text",
+      "x": 42,
+      "y": 95,
+      "fontFamily": 1,
+      "fontSize": 23,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#667085",
+      "text": "A fast API. A durable event. Background workers that finish the job."
+    },
+    {
+      "id": "clients-heading",
+      "type": "text",
+      "x": 60,
+      "y": 195,
+      "fontFamily": 1,
+      "fontSize": 20,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#64748b",
+      "text": "CLIENTS"
+    },
+    {
+      "id": "request-heading",
+      "type": "text",
+      "x": 345,
+      "y": 195,
+      "fontFamily": 1,
+      "fontSize": 20,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#536aa0",
+      "text": "01 / REQUEST + COMMIT"
+    },
+    {
+      "id": "data-heading",
+      "type": "text",
+      "x": 1030,
+      "y": 195,
+      "fontFamily": 1,
+      "fontSize": 20,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#a17c3b",
+      "text": "PERSISTENCE"
+    },
+    {
+      "id": "workers-heading",
+      "type": "text",
+      "x": 60,
+      "y": 775,
+      "fontFamily": 1,
+      "fontSize": 20,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#487860",
+      "text": "02 / BACKGROUND WORK"
+    },
+    {
+      "id": "web-api",
+      "type": "arrow",
+      "x": 255,
+      "y": 352,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#7c8798",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          45,
+          0
+        ],
+        [
+          45,
+          99
+        ],
+        [
+          100,
+          99
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "mobile-api",
+      "type": "arrow",
+      "x": 255,
+      "y": 542,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#7c8798",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          45,
+          0
+        ],
+        [
+          45,
+          -54
+        ],
+        [
+          100,
+          -54
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "api-auth",
+      "type": "arrow",
+      "x": 455,
+      "y": 410,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#7c8798",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -55
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "api-order",
+      "type": "arrow",
+      "x": 555,
+      "y": 470,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#6d7faf",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          115,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "order-cache",
+      "type": "arrow",
+      "x": 790,
+      "y": 410,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#7c8798",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -55
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "order-db",
+      "type": "arrow",
+      "x": 910,
+      "y": 470,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#ad8b51",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          120,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "db-relay",
+      "type": "arrow",
+      "x": 1140,
+      "y": 530,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#ad8b51",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          45
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "relay-events",
+      "type": "arrow",
+      "x": 1030,
+      "y": 617,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#9176ad",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -120,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "events-notification",
+      "type": "arrow",
+      "x": 670,
+      "y": 617,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#6c9780",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -60,
+          0
+        ],
+        [
+          -60,
+          197
+        ],
+        [
+          -205,
+          197
+        ],
+        [
+          -205,
+          213
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "events-fulfillment",
+      "type": "arrow",
+      "x": 790,
+      "y": 670,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#6c9780",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          160
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "notification-email",
+      "type": "arrow",
+      "x": 355,
+      "y": 877,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#6c9780",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -100,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "fulfillment-shipping",
+      "type": "arrow",
+      "x": 910,
+      "y": 877,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#6c9780",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          120,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "solid"
+    },
+    {
+      "id": "fulfillment-retry",
+      "type": "arrow",
+      "x": 790,
+      "y": 930,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 0.8,
+      "strokeWidth": 1.6,
+      "strokeColor": "#98a29e",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          34
+        ],
+        [
+          -150,
+          34
+        ],
+        [
+          -150,
+          -36
+        ],
+        [
+          -120,
+          -36
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null,
+      "strokeStyle": "dashed"
+    },
+    {
+      "id": "web",
+      "type": "rectangle",
+      "x": 65,
+      "y": 310,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#8a97b1",
+      "width": 180,
+      "height": 85,
+      "text": "Web app",
+      "backgroundColor": "#ffffff",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "mobile",
+      "type": "rectangle",
+      "x": 65,
+      "y": 500,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#8a97b1",
+      "width": 180,
+      "height": 85,
+      "text": "Mobile app",
+      "backgroundColor": "#ffffff",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "gateway",
+      "type": "rectangle",
+      "x": 365,
+      "y": 420,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#536aa0",
+      "width": 180,
+      "height": 100,
+      "text": "API\ngateway",
+      "backgroundColor": "#e7edff",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "auth",
+      "type": "rectangle",
+      "x": 365,
+      "y": 265,
+      "fontFamily": 1,
+      "fontSize": 21,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#8896ba",
+      "width": 180,
+      "height": 80,
+      "text": "Auth service",
+      "backgroundColor": "#f0f2fc",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "order",
+      "type": "rectangle",
+      "x": 680,
+      "y": 420,
+      "fontFamily": 1,
+      "fontSize": 25,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#536aa0",
+      "width": 220,
+      "height": 100,
+      "text": "Order service",
+      "backgroundColor": "#dce6ff",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "cache",
+      "type": "rectangle",
+      "x": 680,
+      "y": 265,
+      "fontFamily": 1,
+      "fontSize": 20,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#b58d49",
+      "width": 220,
+      "height": 80,
+      "text": "Redis\nproduct cache",
+      "backgroundColor": "#fff1d6",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "database",
+      "type": "rectangle",
+      "x": 1040,
+      "y": 420,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#b58d49",
+      "width": 200,
+      "height": 100,
+      "text": "Postgres\norders + outbox",
+      "backgroundColor": "#ffe8b3",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "relay",
+      "type": "rectangle",
+      "x": 1040,
+      "y": 585,
+      "fontFamily": 1,
+      "fontSize": 21,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#b58d49",
+      "width": 200,
+      "height": 65,
+      "text": "Outbox relay",
+      "backgroundColor": "#fff2d7",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "events",
+      "type": "rectangle",
+      "x": 680,
+      "y": 575,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#9270b0",
+      "width": 220,
+      "height": 85,
+      "text": "Event bus\norder.created",
+      "backgroundColor": "#eee2ff",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "notifications",
+      "type": "rectangle",
+      "x": 365,
+      "y": 840,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#5b8c71",
+      "width": 200,
+      "height": 85,
+      "text": "Notification\nworker",
+      "backgroundColor": "#d8f0e3",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "fulfillment",
+      "type": "rectangle",
+      "x": 680,
+      "y": 840,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#5b8c71",
+      "width": 220,
+      "height": 85,
+      "text": "Fulfillment\nworker",
+      "backgroundColor": "#d8f0e3",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "email",
+      "type": "rectangle",
+      "x": 65,
+      "y": 840,
+      "fontFamily": 1,
+      "fontSize": 21,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#7c9b8a",
+      "width": 180,
+      "height": 85,
+      "text": "Email provider",
+      "backgroundColor": "#ffffff",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "shipping",
+      "type": "rectangle",
+      "x": 1040,
+      "y": 840,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#7c9b8a",
+      "width": 200,
+      "height": 85,
+      "text": "Inventory\n& shipping",
+      "backgroundColor": "#ffffff",
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "verify-label",
+      "type": "text",
+      "x": 467,
+      "y": 374,
+      "fontFamily": 1,
+      "fontSize": 17,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#667085",
+      "text": "verify"
+    },
+    {
+      "id": "lookup-label",
+      "type": "text",
+      "x": 803,
+      "y": 374,
+      "fontFamily": 1,
+      "fontSize": 17,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#667085",
+      "text": "lookup"
+    },
+    {
+      "id": "order-label",
+      "type": "text",
+      "x": 556,
+      "y": 440,
+      "fontFamily": 1,
+      "fontSize": 16,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#667085",
+      "text": "place order"
+    },
+    {
+      "id": "commit-label",
+      "type": "text",
+      "x": 933,
+      "y": 440,
+      "fontFamily": 1,
+      "fontSize": 17,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#94743d",
+      "text": "commit"
+    },
+    {
+      "id": "publish-label",
+      "type": "text",
+      "x": 935,
+      "y": 586,
+      "fontFamily": 1,
+      "fontSize": 17,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#8a6b9f",
+      "text": "publish"
+    },
+    {
+      "id": "notify-label",
+      "type": "text",
+      "x": 506,
+      "y": 785,
+      "fontFamily": 1,
+      "fontSize": 17,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#5b806c",
+      "text": "notify"
+    },
+    {
+      "id": "fulfill-label",
+      "type": "text",
+      "x": 805,
+      "y": 736,
+      "fontFamily": 1,
+      "fontSize": 17,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#5b806c",
+      "text": "fulfill"
+    },
+    {
+      "id": "send-label",
+      "type": "text",
+      "x": 286,
+      "y": 848,
+      "fontFamily": 1,
+      "fontSize": 17,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#5b806c",
+      "text": "send"
+    },
+    {
+      "id": "ship-label",
+      "type": "text",
+      "x": 916,
+      "y": 848,
+      "fontFamily": 1,
+      "fontSize": 16,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#5b806c",
+      "text": "reserve + ship"
+    },
+    {
+      "id": "retry-label",
+      "type": "text",
+      "x": 652,
+      "y": 939,
+      "fontFamily": 1,
+      "fontSize": 16,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#7a8c82",
+      "text": "retry safely"
+    },
+    {
+      "id": "client-note",
+      "type": "text",
+      "x": 64,
+      "y": 642,
+      "fontFamily": 1,
+      "fontSize": 17,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#8893a5",
+      "text": "One request.\nNo waiting on email."
+    },
+    {
+      "id": "db-note",
+      "type": "text",
+      "x": 1040,
+      "y": 280,
+      "fontFamily": 1,
+      "fontSize": 22,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#a17c3b",
+      "text": "Commit first.\nPublish after."
+    },
+    {
+      "id": "worker-note",
+      "type": "text",
+      "x": 59,
+      "y": 943,
+      "fontFamily": 1,
+      "fontSize": 17,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#799084",
+      "text": "Independent workers, retriable jobs."
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "x": 42,
+      "y": 1020,
+      "fontFamily": 1,
+      "fontSize": 18,
+      "roughness": 1.2,
+      "strokeWidth": 1.8,
+      "strokeColor": "#8a94a5",
+      "text": "Made with excalidraw-codex  /  hand-drawn, fully editable"
+    }
+  ],
+  "fit": true
+}
